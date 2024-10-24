@@ -19,11 +19,21 @@ float divide(int i, int j) {
     }
     return ((float) i / j);  // Explicit type casting to float for decimal results.
 }
+
 int sqaure(int i){
 	return (i*i);
 }
+
 int cube(int i){
 	return (i*i*i);
+}
+
+float inverse(int i){
+	if(i == 0) {
+		printf("Inverse is not allowed");
+		return 0;
+	}
+        return ((float) 1/i);
 }
 
 int main() {
@@ -79,8 +89,8 @@ int main() {
                 break;
             case 'i':
                 printf("Enter an integer: ");
-                scanf("%d", &a);
-                printf("Will be implemented soon...\n");
+                scanf("%f", &a);
+                printf("The result of %d inversed is %f\n",a,inverse(a));
                 break;
             default:
                 printf("Invalid operation. Please try again.\n");
